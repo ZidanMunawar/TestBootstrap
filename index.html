@@ -1,0 +1,1138 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"
+    />
+    <meta
+      name="description"
+      content="Coffee Racer - Pacu nikmatnya kopi hingga finish. Temukan kopi dan makanan berkualitas terbaik."
+    />
+    <meta name="theme-color" content="#0a0a0a" />
+    <title>COFFEE RACER | Pacu Nikmat Kopi</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome 6 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-bs-spy="scroll" data-bs-target="#nav" data-bs-offset="80">
+    <!-- ========== PRELOADER ========== -->
+    <div id="preloader">
+      <div class="coffee-cup">
+        <i class="fas fa-mug-hot"></i>
+        <div class="steam">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <p class="text-warning mt-3 fw-bold">COFFEE RACER</p>
+    </div>
+
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="nav">
+      <div class="container">
+        <a class="navbar-brand" href="#home">
+          COFFEE<span class="text-warning">RACER</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-1">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">Tentang</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Menu</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#menu"
+                    ><i class="fas fa-mug-hot me-2"></i>Minuman</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#menu2"
+                    ><i class="fas fa-utensils me-2"></i>Makanan</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#gmaps">Kontak</a>
+            </li>
+            <li class="nav-item ms-lg-2">
+              <button
+                class="btn btn-cart position-relative"
+                data-bs-toggle="modal"
+                data-bs-target="#cartModal"
+                aria-label="Keranjang Belanja"
+              >
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-badge" id="cartCount">0</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero-section" id="home">
+      <div class="hero-overlay"></div>
+      <div class="hero-particles" id="particles"></div>
+      <div class="container hero-content">
+        <div class="row align-items-center min-vh-100">
+          <div class="col-lg-7" data-aos="fade-up" data-aos-duration="1000">
+            <span class="badge bg-warning text-dark mb-3 px-3 py-2 fs-6"
+              >🔥 #1 Coffee Shop 2024</span
+            >
+            <h1 class="hero-title">
+              COFFEE<span class="text-warning">RACER</span>
+            </h1>
+            <p class="hero-subtitle">
+              Pacu nikmatnya kopi hingga garis finish. Rasakan adrenalin rasa di
+              setiap tegukan.
+            </p>
+            <div class="hero-buttons mt-4">
+              <a href="#menu" class="btn btn-warning btn-lg me-3">
+                <i class="fas fa-mug-hot me-2"></i>Lihat Menu
+              </a>
+              <a href="#gmaps" class="btn btn-outline-light btn-lg">
+                <i class="fas fa-map-marker-alt me-2"></i>Lokasi
+              </a>
+            </div>
+            <div class="hero-stats mt-5 d-flex gap-4">
+              <div class="stat-item">
+                <h3 class="text-warning counter" data-target="50">0</h3>
+                <span>Varian Menu</span>
+              </div>
+              <div class="stat-item">
+                <h3 class="text-warning counter" data-target="5000">0</h3>
+                <span>Pelanggan</span>
+              </div>
+              <div class="stat-item">
+                <h3 class="text-warning counter" data-target="100">0</h3>
+                <span>Rating</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-5 text-center d-none d-lg-block"
+            data-aos="fade-left"
+            data-aos-duration="1200"
+          >
+            <div class="hero-image-wrapper">
+              <img
+                src="images/coffee-cup-hero.png"
+                alt="Coffee Cup"
+                class="hero-image floating"
+                onerror="this.style.display = 'none'"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT SECTION ========== -->
+    <section class="about-section position-relative" id="about">
+      <div class="about-bg-overlay"></div>
+      <div class="container position-relative z-1 py-5">
+        <div class="row mb-5 align-items-center">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-duration="800">
+            <span class="text-warning fw-bold text-uppercase"
+              >Tentang Kami</span
+            >
+            <h2 class="display-4 fw-bold text-white mt-2">
+              Kenapa <span class="text-warning">COFFEE RACER?</span>
+            </h2>
+            <p class="fs-5 text-light mt-3 opacity-75">
+              Kami menyajikan kopi berkualitas tinggi dari biji pilihan, menu
+              inovatif, pelayanan ramah, interior modern yang instagramable, dan
+              Wi-Fi super cepat. Tempat terbaik untuk memulai harimu atau
+              sekadar melepas penat.
+            </p>
+            <div class="feature-list mt-4">
+              <div class="d-flex align-items-center mb-3">
+                <i class="fas fa-check-circle text-warning fs-4 me-3"></i>
+                <span class="text-white">Biji kopi premium pilihan</span>
+              </div>
+              <div class="d-flex align-items-center mb-3">
+                <i class="fas fa-check-circle text-warning fs-4 me-3"></i>
+                <span class="text-white">Barista bersertifikasi</span>
+              </div>
+              <div class="d-flex align-items-center mb-3">
+                <i class="fas fa-check-circle text-warning fs-4 me-3"></i>
+                <span class="text-white">Suasana nyaman & modern</span>
+              </div>
+              <div class="d-flex align-items-center">
+                <i class="fas fa-check-circle text-warning fs-4 me-3"></i>
+                <span class="text-white">Wi-Fi gratis 100 Mbps</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-6 text-center mt-4 mt-lg-0"
+            data-aos="fade-left"
+            data-aos-duration="800"
+          >
+            <div class="about-image-wrapper">
+              <img
+                src="images/about-coffee.jpg"
+                alt="About Coffee"
+                class="img-fluid rounded-4 shadow-lg"
+                onerror="this.style.display = 'none'"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Founders -->
+        <div
+          class="founders-section mt-5 pt-5 border-top border-secondary border-opacity-25"
+        >
+          <h3 class="text-center text-warning mb-2" data-aos="fade-up">
+            Para Founder
+          </h3>
+          <p
+            class="text-center text-white-50 mb-5"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            Orang-orang hebat di balik Coffee Racer
+          </p>
+          <div class="row g-4 justify-content-center">
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="flip-left"
+              data-aos-delay="100"
+            >
+              <div class="founder-card">
+                <div class="founder-img-wrapper">
+                  <img
+                    src="images/WhatsApp Image 2024-08-04 at 20.40.22_72b0451d.jpg"
+                    alt="Bang Rotz"
+                    loading="lazy"
+                  />
+                  <div class="founder-social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                  </div>
+                </div>
+                <div class="founder-info">
+                  <h5>BANG ROTZ</h5>
+                  <span>Cimahi Selatan</span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="flip-left"
+              data-aos-delay="200"
+            >
+              <div class="founder-card">
+                <div class="founder-img-wrapper">
+                  <img
+                    src="images/WhatsApp Image 2024-08-04 at 20.40.23_c7567e5e.jpg"
+                    alt="MR.ZANG"
+                    loading="lazy"
+                  />
+                  <div class="founder-social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                  </div>
+                </div>
+                <div class="founder-info">
+                  <h5>MR.ZANG</h5>
+                  <span>Batujajar President</span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="flip-left"
+              data-aos-delay="300"
+            >
+              <div class="founder-card">
+                <div class="founder-img-wrapper">
+                  <img src="images/dapex.jpg" alt="DAPRUT" loading="lazy" />
+                  <div class="founder-social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                  </div>
+                </div>
+                <div class="founder-info">
+                  <h5>DAPRUT</h5>
+                  <span>Cigugur</span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="flip-left"
+              data-aos-delay="400"
+            >
+              <div class="founder-card">
+                <div class="founder-img-wrapper">
+                  <img src="images/zdn.jpg" alt="ZDN" loading="lazy" />
+                  <div class="founder-social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                  </div>
+                </div>
+                <div class="founder-info">
+                  <h5>ZDN</h5>
+                  <span>Galanggang</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== DRINK MENU SECTION ========== -->
+    <section class="menu-section" id="menu">
+      <div class="container">
+        <div class="section-header text-center mb-5" data-aos="fade-up">
+          <span class="text-warning text-uppercase fw-bold">Menu Kami</span>
+          <h2 class="display-5 fw-bold text-white mt-2">
+            <span class="text-warning">DRINK</span> MENU
+          </h2>
+          <div class="divider mx-auto"></div>
+        </div>
+        <div class="row g-4 justify-content-center" id="drinkMenuContainer">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FOOD MENU SECTION ========== -->
+    <section class="menu-section menu-section-alt" id="menu2">
+      <div class="container">
+        <div class="section-header text-center mb-5" data-aos="fade-up">
+          <span class="text-warning text-uppercase fw-bold">Menu Kami</span>
+          <h2 class="display-5 fw-bold text-white mt-2">
+            <span class="text-warning">FOOD</span> MENU
+          </h2>
+          <div class="divider mx-auto"></div>
+        </div>
+        <div class="row g-4 justify-content-center" id="foodMenuContainer">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TESTIMONIAL SECTION ========== -->
+    <section class="testimonial-section" id="testimonial">
+      <div class="container">
+        <div class="section-header text-center mb-5" data-aos="fade-up">
+          <span class="text-warning text-uppercase fw-bold">Testimonial</span>
+          <h2 class="display-5 fw-bold text-white mt-2">
+            Apa Kata <span class="text-warning">Mereka?</span>
+          </h2>
+          <div class="divider mx-auto"></div>
+        </div>
+        <div class="row g-4 justify-content-center">
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="testimonial-card">
+              <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+              <p class="testimonial-text">
+                "Kopi terenak yang pernah saya coba! Suasananya bikin betah
+                berlama-lama. Recommended banget!"
+              </p>
+              <div class="testimonial-author">
+                <img
+                  src="images/avatar1.jpg"
+                  alt="Avatar"
+                  onerror="this.style.display = 'none'"
+                />
+                <div>
+                  <h6>Rizky Pratama</h6>
+                  <small>Pelanggan Setia</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="testimonial-card">
+              <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+              <p class="testimonial-text">
+                "Burger dan kopinya juara! Tempatnya cozy, cocok buat nugas atau
+                nongkrong bareng temen."
+              </p>
+              <div class="testimonial-author">
+                <img
+                  src="images/avatar2.jpg"
+                  alt="Avatar"
+                  onerror="this.style.display = 'none'"
+                />
+                <div>
+                  <h6>Sarah Amalia</h6>
+                  <small>Food Blogger</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="testimonial-card">
+              <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+              <p class="testimonial-text">
+                "Pelayanan ramah, tempat bersih, dan yang paling penting kopinya
+                bikin nagih!"
+              </p>
+              <div class="testimonial-author">
+                <img
+                  src="images/avatar3.jpg"
+                  alt="Avatar"
+                  onerror="this.style.display = 'none'"
+                />
+                <div>
+                  <h6>Andre Wijaya</h6>
+                  <small>Mahasiswa</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PROMO SECTION ========== -->
+    <section class="promo-section" id="promo">
+      <div class="container">
+        <div class="promo-card" data-aos="zoom-in" data-aos-duration="800">
+          <div class="row align-items-center">
+            <div class="col-lg-8">
+              <span class="badge bg-danger mb-2">PROMO TERBATAS</span>
+              <h2 class="fw-bold text-white">
+                Diskon 20% Untuk Pelanggan Baru!
+              </h2>
+              <p class="text-white-50 mb-0">
+                Gunakan kode
+                <span class="text-warning fw-bold">RACER20</span> saat checkout.
+                Berlaku hingga akhir bulan ini.
+              </p>
+            </div>
+            <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+              <button
+                class="btn btn-warning btn-lg"
+                data-bs-toggle="modal"
+                data-bs-target="#cartModal"
+              >
+                Klaim Sekarang <i class="fas fa-arrow-right ms-2"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT SECTION ========== -->
+    <section class="contact-section" id="gmaps">
+      <div class="container">
+        <div class="section-header text-center mb-5" data-aos="fade-up">
+          <span class="text-warning text-uppercase fw-bold">Kontak</span>
+          <h2 class="display-5 fw-bold mt-2">
+            Hubungi <span class="text-warning">Kami</span>
+          </h2>
+          <div class="divider mx-auto"></div>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-duration="800">
+            <div class="contact-card">
+              <h4 class="fw-bold mb-4">
+                <i class="fas fa-paper-plane text-warning me-2"></i>Kirim Pesan
+              </h4>
+              <form id="contactForm">
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nameInput"
+                    placeholder="Nama Kamu"
+                    required
+                  />
+                  <label for="nameInput">Nama Kamu</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="emailInput"
+                    placeholder="Email Kamu"
+                    required
+                  />
+                  <label for="emailInput">Email Kamu</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <textarea
+                    class="form-control"
+                    id="messageInput"
+                    placeholder="Pesan"
+                    style="height: 120px"
+                    required
+                  ></textarea>
+                  <label for="messageInput">Pesan Kamu</label>
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-warning w-100 fw-bold py-3"
+                >
+                  <i class="fas fa-paper-plane me-2"></i>Kirim Pesan
+                </button>
+              </form>
+              <div id="formFeedback" class="mt-3"></div>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left" data-aos-duration="800">
+            <div class="contact-card p-0 overflow-hidden">
+              <div class="map-wrapper">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3486.182442051365!2d107.6767381743676!3d-6.934355593065549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c2afc7524b2b%3A0xa2b4bf7f58e635f5!2sPangkas%20Rambut%20Ajat!5e1!3m2!1sen!2sbd!4v1722819677377!5m2!1sen!2sbd"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+              <div class="contact-info-list p-4">
+                <div class="d-flex align-items-center mb-3">
+                  <i class="fas fa-map-marker-alt text-warning fs-4 me-3"></i>
+                  <span>Jl. Coffee Racer No. 123, Bandung</span>
+                </div>
+                <div class="d-flex align-items-center mb-3">
+                  <i class="fas fa-phone text-warning fs-4 me-3"></i>
+                  <span>+62 812-3456-7890</span>
+                </div>
+                <div class="d-flex align-items-center">
+                  <i class="fas fa-envelope text-warning fs-4 me-3"></i>
+                  <span>hello@coffeeracer.id</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer-section">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <h4 class="text-white mb-3">
+              COFFEE<span class="text-warning">RACER</span>
+            </h4>
+            <p class="text-white-50">
+              Pacu nikmatnya kopi hingga garis finish. Temukan pengalaman ngopi
+              terbaik hanya di Coffee Racer.
+            </p>
+            <div class="footer-social mt-3">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4">
+            <h5 class="text-white mb-3">Menu</h5>
+            <ul class="list-unstyled">
+              <li><a href="#menu" class="text-white-50">Minuman</a></li>
+              <li><a href="#menu2" class="text-white-50">Makanan</a></li>
+              <li><a href="#" class="text-white-50">Promo</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-4">
+            <h5 class="text-white mb-3">Tentang</h5>
+            <ul class="list-unstyled">
+              <li><a href="#about" class="text-white-50">Tentang Kami</a></li>
+              <li><a href="#gmaps" class="text-white-50">Lokasi</a></li>
+              <li><a href="#gmaps" class="text-white-50">Kontak</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <h5 class="text-white mb-3">Jam Operasional</h5>
+            <ul class="list-unstyled text-white-50">
+              <li>Senin - Jumat: 07.00 - 22.00</li>
+              <li>Sabtu: 08.00 - 23.00</li>
+              <li>Minggu: 08.00 - 21.00</li>
+            </ul>
+          </div>
+        </div>
+        <hr class="border-secondary opacity-25 mt-4" />
+        <div class="text-center text-white-50 py-3">
+          <p class="mb-0">
+            &copy; 2024 COFFEE RACER. Designed with
+            <i class="fas fa-heart text-danger"></i> by
+            <span class="text-warning fw-bold">Zidan</span>. All rights
+            reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ========== BACK TO TOP ========== -->
+    <button
+      id="backToTop"
+      class="btn btn-warning back-to-top"
+      aria-label="Back to top"
+    >
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- ========== CART MODAL ========== -->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content cart-modal-content">
+          <div class="modal-header border-secondary border-opacity-25">
+            <h5 class="modal-title fw-bold">
+              <i class="fas fa-shopping-bag text-warning me-2"></i>Keranjang
+              Belanja
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body" id="cartItemsContainer">
+            <div class="text-center py-5">
+              <i class="fas fa-shopping-cart fs-1 text-secondary mb-3"></i>
+              <p class="text-muted">Keranjang masih kosong nih...</p>
+            </div>
+          </div>
+          <div class="modal-footer border-secondary border-opacity-25">
+            <div
+              class="d-flex justify-content-between align-items-center w-100"
+            >
+              <span class="fw-bold fs-5"
+                >Total:
+                <span id="cartTotal" class="text-warning">Rp0</span></span
+              >
+              <div class="d-flex gap-2">
+                <button class="btn btn-outline-light btn-sm" id="clearCartBtn">
+                  <i class="fas fa-trash me-1"></i>Kosongkan
+                </button>
+                <button class="btn btn-warning fw-bold" id="checkoutBtn">
+                  <i class="fas fa-credit-card me-1"></i>Checkout
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== PRODUCT DETAIL MODAL ========== -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content cart-modal-content">
+          <div class="modal-header border-secondary border-opacity-25">
+            <h5 class="modal-title fw-bold" id="productModalTitle">
+              Detail Produk
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body text-center" id="productModalBody">
+            <!-- Filled by JS -->
+          </div>
+          <div class="modal-footer border-secondary border-opacity-25">
+            <button class="btn btn-warning w-100 fw-bold" id="addFromDetailBtn">
+              <i class="fas fa-cart-plus me-2"></i>Tambah ke Keranjang
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== TOAST NOTIFICATION ========== -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div
+        id="liveToast"
+        class="toast align-items-center text-bg-warning border-0"
+        role="alert"
+      >
+        <div class="d-flex">
+          <div class="toast-body fw-bold text-dark" id="toastMessage">
+            <i class="fas fa-check-circle me-2"></i>Item ditambahkan!
+          </div>
+          <button
+            type="button"
+            class="btn-close btn-close-dark me-2 m-auto"
+            data-bs-dismiss="toast"
+          ></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== SCRIPTS ========== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      // Inisialisasi AOS
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 50,
+      });
+
+      // ========== PRELOADER ==========
+      window.addEventListener("load", function () {
+        setTimeout(function () {
+          const preloader = document.getElementById("preloader");
+          if (preloader) {
+            preloader.classList.add("fade-out");
+            setTimeout(() => preloader.remove(), 500);
+          }
+        }, 1500);
+      });
+
+      // ========== DATA MENU ==========
+      const drinkMenu = [
+        {
+          name: "MOCHA",
+          price: 15000,
+          img: "images/mocha.jpg",
+          desc: "Kopi dengan campuran coklat premium yang creamy.",
+        },
+        {
+          name: "CAPPUCINO",
+          price: 13000,
+          img: "images/capcin.jpg",
+          desc: "Espresso dengan steamed milk dan foam lembut.",
+        },
+        {
+          name: "EXPRESSO",
+          price: 10000,
+          img: "images/expreso.jpg",
+          desc: "Espresso murni dengan cita rasa kuat dan tegas.",
+        },
+        {
+          name: "MACHIATO",
+          price: 16000,
+          img: "images/mavhiato.jpg",
+          desc: "Espresso dengan sedikit sentuhan susu berbusa.",
+        },
+        {
+          name: "AMERICANO",
+          price: 12000,
+          img: "images/americano.jpg",
+          desc: "Espresso yang dicampur air panas, ringan dan segar.",
+        },
+        {
+          name: "VANILLA LATTE",
+          price: 15000,
+          img: "images/vanila.jpg",
+          desc: "Latte dengan sirup vanilla manis yang harum.",
+        },
+      ];
+
+      const foodMenu = [
+        {
+          name: "STEAK",
+          price: 25000,
+          img: "images/stik.jpg",
+          desc: "Steak daging sapi pilihan dengan saus spesial.",
+        },
+        {
+          name: "BANANACHIPS",
+          price: 17000,
+          img: "images/cau.jpg",
+          desc: "Keripik pisang renyah dengan berbagai varian rasa.",
+        },
+        {
+          name: "BURGER",
+          price: 20000,
+          img: "images/buger.jpg",
+          desc: "Burger juicy dengan patty tebal dan sayuran segar.",
+        },
+        {
+          name: "CROISSANT",
+          price: 23000,
+          img: "images/krosan.jpg",
+          desc: "Croissant flaky dengan butter premium.",
+        },
+        {
+          name: "CARBONARA",
+          price: 20000,
+          img: "images/karbonara.jpg",
+          desc: "Pasta carbonara creamy dengan daging asap.",
+        },
+      ];
+
+      // ========== CART STATE ==========
+      let cart = JSON.parse(localStorage.getItem("coffeeRacerCart")) || [];
+      let currentDetailProduct = null;
+
+      // ========== RENDER MENU ==========
+      function renderMenu(containerId, items) {
+        const container = document.getElementById(containerId);
+        if (!container) return;
+        container.innerHTML = items
+          .map(
+            (item, index) => `
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="${index * 100}">
+          <div class="menu-card">
+            <div class="menu-card-img-wrapper">
+              <img src="${item.img}" alt="${item.name}" loading="lazy" onerror="this.src='https://placehold.co/400x300/1a1a1a/ffc107?text=${item.name}'" />
+              <div class="menu-card-overlay">
+                <button class="btn btn-light btn-sm rounded-pill detail-btn" data-name="${item.name}" data-price="${item.price}" data-img="${item.img}" data-desc="${item.desc}">
+                  <i class="fas fa-eye me-1"></i>Detail
+                </button>
+              </div>
+            </div>
+            <div class="menu-card-body">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <h5 class="fw-bold mb-0">${item.name}</h5>
+                <span class="badge bg-warning text-dark fs-6">Rp${item.price.toLocaleString()}</span>
+              </div>
+              <p class="text-white-50 small mb-3">${item.desc}</p>
+              <button class="btn btn-outline-warning w-100 add-to-cart-btn" data-name="${item.name}" data-price="${item.price}" data-img="${item.img}">
+                <i class="fas fa-cart-plus me-2"></i>Tambah ke Keranjang
+              </button>
+            </div>
+          </div>
+        </div>
+      `,
+          )
+          .join("");
+      }
+
+      renderMenu("drinkMenuContainer", drinkMenu);
+      renderMenu("foodMenuContainer", foodMenu);
+
+      // ========== CART FUNCTIONS ==========
+      function saveCart() {
+        localStorage.setItem("coffeeRacerCart", JSON.stringify(cart));
+        updateCartUI();
+      }
+
+      function updateCartUI() {
+        const countSpan = document.getElementById("cartCount");
+        const totalSpan = document.getElementById("cartTotal");
+        const cartContainer = document.getElementById("cartItemsContainer");
+
+        if (!countSpan || !totalSpan) return;
+
+        const totalItem = cart.reduce((sum, item) => sum + item.quantity, 0);
+        const totalPrice = cart.reduce(
+          (sum, item) => sum + item.price * item.quantity,
+          0,
+        );
+
+        countSpan.textContent = totalItem;
+        totalSpan.textContent = `Rp${totalPrice.toLocaleString()}`;
+
+        if (cartContainer) {
+          if (cart.length === 0) {
+            cartContainer.innerHTML = `
+            <div class="text-center py-5">
+              <i class="fas fa-shopping-cart fs-1 text-secondary mb-3"></i>
+              <p class="text-muted">Keranjang masih kosong nih...</p>
+            </div>`;
+          } else {
+            cartContainer.innerHTML = cart
+              .map(
+                (item, idx) => `
+            <div class="cart-item d-flex align-items-center justify-content-between py-3 border-bottom border-secondary border-opacity-25">
+              <div class="d-flex align-items-center gap-3">
+                <img src="${item.img}" width="50" height="50" class="rounded-3 object-fit-cover" onerror="this.style.display='none'" />
+                <div>
+                  <span class="fw-bold">${item.name}</span>
+                  <br />
+                  <span class="text-warning small">Rp${item.price.toLocaleString()}</span>
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <button class="btn btn-sm btn-outline-light change-qty" data-index="${idx}" data-action="dec">−</button>
+                <span class="fw-bold mx-1">${item.quantity}</span>
+                <button class="btn btn-sm btn-outline-light change-qty" data-index="${idx}" data-action="inc">+</button>
+                <button class="btn btn-sm btn-outline-danger remove-item ms-2" data-index="${idx}"><i class="fas fa-trash"></i></button>
+              </div>
+            </div>
+          `,
+              )
+              .join("");
+          }
+        }
+      }
+
+      // ========== EVENT LISTENERS ==========
+      document.addEventListener("click", function (e) {
+        // Add to cart
+        if (e.target.closest(".add-to-cart-btn")) {
+          const btn = e.target.closest(".add-to-cart-btn");
+          addToCart(
+            btn.dataset.name,
+            parseInt(btn.dataset.price),
+            btn.dataset.img,
+          );
+        }
+
+        // Product detail
+        if (e.target.closest(".detail-btn")) {
+          const btn = e.target.closest(".detail-btn");
+          showProductDetail(
+            btn.dataset.name,
+            btn.dataset.price,
+            btn.dataset.img,
+            btn.dataset.desc,
+          );
+        }
+
+        // Change quantity in cart
+        if (e.target.closest(".change-qty")) {
+          const btn = e.target.closest(".change-qty");
+          const index = parseInt(btn.dataset.index);
+          const action = btn.dataset.action;
+          if (isNaN(index) || index < 0 || index >= cart.length) return;
+          if (action === "inc") cart[index].quantity += 1;
+          else if (action === "dec") {
+            cart[index].quantity -= 1;
+            if (cart[index].quantity <= 0) cart.splice(index, 1);
+          }
+          saveCart();
+        }
+
+        // Remove item
+        if (e.target.closest(".remove-item")) {
+          const btn = e.target.closest(".remove-item");
+          const index = parseInt(btn.dataset.index);
+          if (!isNaN(index) && index >= 0 && index < cart.length) {
+            cart.splice(index, 1);
+            saveCart();
+            showToast("Item dihapus dari keranjang 🗑️");
+          }
+        }
+      });
+
+      function addToCart(name, price, img) {
+        const existing = cart.find((item) => item.name === name);
+        if (existing) {
+          existing.quantity += 1;
+        } else {
+          cart.push({ name, price, img, quantity: 1 });
+        }
+        saveCart();
+        showToast(`${name} ditambahkan ke keranjang! 🛒`);
+      }
+
+      function showProductDetail(name, price, img, desc) {
+        currentDetailProduct = { name, price: parseInt(price), img, desc };
+        document.getElementById("productModalTitle").textContent = name;
+        document.getElementById("productModalBody").innerHTML = `
+        <img src="${img}" alt="${name}" class="img-fluid rounded-3 mb-3" style="max-height: 250px; width: 100%; object-fit: cover;" onerror="this.src='https://placehold.co/400x300/1a1a1a/ffc107?text=${name}'" />
+        <h4 class="text-warning fw-bold mb-2">Rp${parseInt(price).toLocaleString()}</h4>
+        <p class="text-white-50">${desc}</p>
+      `;
+        new bootstrap.Modal(document.getElementById("productModal")).show();
+      }
+
+      document
+        .getElementById("addFromDetailBtn")
+        ?.addEventListener("click", function () {
+          if (currentDetailProduct) {
+            addToCart(
+              currentDetailProduct.name,
+              currentDetailProduct.price,
+              currentDetailProduct.img,
+            );
+            bootstrap.Modal.getInstance(
+              document.getElementById("productModal"),
+            )?.hide();
+          }
+        });
+
+      // Clear cart
+      document
+        .getElementById("clearCartBtn")
+        ?.addEventListener("click", function () {
+          if (cart.length === 0) return;
+          cart = [];
+          saveCart();
+          showToast("Keranjang dikosongkan 🗑️");
+        });
+
+      // Checkout
+      document
+        .getElementById("checkoutBtn")
+        ?.addEventListener("click", function () {
+          if (cart.length === 0) {
+            showToast("Keranjang masih kosong! 😢");
+            return;
+          }
+          const total = cart.reduce(
+            (sum, item) => sum + item.price * item.quantity,
+            0,
+          );
+          alert(
+            `🎉 Checkout berhasil! (Simulasi)\n\nTotal pesanan: Rp${total.toLocaleString()}\n\nTerima kasih sudah berbelanja di Coffee Racer!`,
+          );
+          cart = [];
+          saveCart();
+          bootstrap.Modal.getInstance(
+            document.getElementById("cartModal"),
+          )?.hide();
+        });
+
+      // Contact form
+      document
+        .getElementById("contactForm")
+        ?.addEventListener("submit", function (e) {
+          e.preventDefault();
+          const name = document.getElementById("nameInput").value;
+          document.getElementById("formFeedback").innerHTML = `
+        <div class="alert alert-success d-flex align-items-center" role="alert">
+          <i class="fas fa-check-circle me-2"></i>
+          <div>Terima kasih <strong>${name}</strong>! Pesan kamu sudah terkirim. Kami akan menghubungi segera.</div>
+        </div>`;
+          this.reset();
+          setTimeout(() => {
+            document.getElementById("formFeedback").innerHTML = "";
+          }, 4000);
+        });
+
+      // Toast
+      function showToast(message) {
+        const toastEl = document.getElementById("liveToast");
+        const toastMsg = document.getElementById("toastMessage");
+        if (toastEl && toastMsg) {
+          toastMsg.innerHTML = `<i class="fas fa-check-circle me-2"></i>${message}`;
+          const toast = new bootstrap.Toast(toastEl, { delay: 2500 });
+          toast.show();
+        }
+      }
+
+      // Back to top
+      const backToTopBtn = document.getElementById("backToTop");
+      window.addEventListener("scroll", function () {
+        if (backToTopBtn) {
+          backToTopBtn.classList.toggle("show", window.scrollY > 500);
+        }
+      });
+      backToTopBtn?.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      // Counter animation
+      function animateCounters() {
+        document.querySelectorAll(".counter").forEach((counter) => {
+          const target = +counter.getAttribute("data-target");
+          const count = +counter.innerText;
+          const increment = target / 100;
+          if (count < target) {
+            counter.innerText = Math.ceil(count + increment);
+            setTimeout(animateCounters, 20);
+          } else {
+            counter.innerText = target;
+          }
+        });
+      }
+
+      // Trigger counter on scroll
+      const heroStats = document.querySelector(".hero-stats");
+      if (heroStats) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                animateCounters();
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.5 },
+        );
+        observer.observe(heroStats);
+      }
+
+      // Navbar scroll effect
+      window.addEventListener("scroll", function () {
+        const nav = document.getElementById("nav");
+        if (nav) {
+          nav.classList.toggle("scrolled", window.scrollY > 50);
+        }
+      });
+
+      // Update nav active state
+      window.addEventListener("scroll", function () {
+        const sections = document.querySelectorAll("section[id]");
+        let current = "";
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop - 100;
+          if (window.scrollY >= sectionTop) {
+            current = section.getAttribute("id");
+          }
+        });
+        document.querySelectorAll(".navbar-nav .nav-link").forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${current}`) {
+            link.classList.add("active");
+          }
+        });
+      });
+
+      // Initial cart render
+      updateCartUI();
+    </script>
+  </body>
+</html>
